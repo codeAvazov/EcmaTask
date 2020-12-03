@@ -1,0 +1,63 @@
+@import "../../Table/Table";
+
+.filter {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 24px;
+  box-shadow: 0 0 15px 0 #00000010;
+  z-index: 999;
+  bottom: 490px;
+  right: -180px;
+  transition: .6s ease-in-out;
+  @media screen and (max-width: 768px){
+    right: -100px;
+  }
+
+
+  &.openFilter {
+    bottom: -490px;
+  }
+
+  .selects {
+
+    .select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #D8D8D8;
+      width: 220px;
+      height: 60px;
+      padding: 0 25px;
+      font-family: SF Pro Display, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0;
+      text-align: left;
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      i {
+        font-size: 24px;
+        vertical-align: -9px;
+      }
+    }
+  }
+
+  .checks {
+
+    .checkboxFilter {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .labelWrap {
+        @include LabelBlock();
+        .labelBg {
+          @include LabelBg();
+        }
+      }
+    }
+  }
+}

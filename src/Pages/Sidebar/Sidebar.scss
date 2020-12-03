@@ -1,0 +1,80 @@
+.sidebar {
+  padding: 44px 0 40px 55px;
+  height: inherit;
+  width: inherit;
+  transition: .4s ease-in-out;
+
+
+  .navigation {
+    border-right: 1px solid #E5E5E5;
+    height: 100%;
+    position: relative;
+
+    .list_nav {
+      padding-top: 50px;
+
+      &_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #BEBEBE;
+        margin: 15px 0;
+        transition: all .4s ease-in-out;
+
+        .item_icon i {
+          color: #262626;
+          font-size: 22px;
+          opacity: .3;
+          transition: all .4s ease-in-out;
+        }
+
+        .item_title {
+          margin-left: 18px;
+          font-family: SF Pro Display, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 0;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: #262626;
+
+          .item_icon i {
+            color: #00B533;
+            opacity: 1;
+          }
+        }
+
+        &:nth-child(8){
+          position: absolute;
+          bottom: 30px;
+          width: 100%;
+        }
+        &:nth-child(9) {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: 0;
+          width: 100%;
+          margin: 0;
+        }
+
+        &.active_link {
+          color: #262626;
+          border-right: 2px solid #00B533;
+
+          .item_icon i {
+            color: #00B533;
+            opacity: 1;
+          }
+        }
+      }
+
+      .link_active {
+        color: #262626;
+      }
+    }
+  }
+}

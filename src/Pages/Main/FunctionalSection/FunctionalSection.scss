@@ -1,0 +1,111 @@
+@import "../../Navbar/Navbar";
+
+@mixin inputBlock() {
+  font-family: SF Pro Display, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.funcBlock {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left_section, .right_section, .msg, .excel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left_section {
+    .search_input_block {
+      position: relative;
+      margin-right: 25px;
+      width: 260px;
+
+      .search_input {
+        border: none;
+        border-bottom: 1px solid #D8D8D8;
+        padding: 10px 26px;
+        width: 100%;
+        @include inputBlock();
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          @include inputBlock();
+        }
+      }
+
+      i {
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &.goRight {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .right_section {
+    .excel, .msg {
+      padding: 14px 18px;
+      font-family: SF Pro Display, sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 14px;
+      letter-spacing: 0;
+      cursor: pointer;
+
+      i {
+        margin-right: 10px;
+        font-size: 22px;
+        vertical-align: -4px;
+        font-weight: 500;
+      }
+    }
+
+    .excel {
+      background-color: #00B533;
+      color: #fff;
+      border: 2px solid #00B533;
+      margin-right: 1rem;
+    }
+    .msg {
+      border: 2px solid #000;
+    }
+
+    @media screen and (max-width: 450px){
+      .mobile-layout {
+        .msg, .excel {
+          font-size: 12px;
+          padding: 12px 5px;
+        }
+      }
+    }
+  }
+
+  .iconSec {
+    @include Icons();
+  }
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    align-items: flex-start;
+
+    .left_section, .right_section {
+      margin-bottom: 1rem;
+    }
+  }
+}

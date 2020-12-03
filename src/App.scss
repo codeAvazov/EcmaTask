@@ -1,0 +1,50 @@
+.layoutApp {
+  display: flex;
+
+  .right_block {
+    width: calc(100vw - 290px);
+    margin-left: auto;
+    z-index: 0;
+    @media screen and (max-width: 768px){
+      width: 100vw;
+      left: 0;
+    }
+  }
+
+  .left_menu {
+    z-index: 99;
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .4s ease-in-out;
+    background-color: #fff;
+
+    .mobile-toggle {
+      position: absolute;
+      top: 44px;
+      right: -42px;
+      width: 42px;
+      height: 38px;
+      font-size: 28px;
+      font-weight: 300;
+      box-shadow: 2px 0 15px 0 #00000011;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 0 1rem 1rem 0;
+      background-color: #ffffff;
+      z-index: 99;
+      @media screen and (max-width: 768px){
+        display: flex;
+      }
+    }
+
+    &.l-0 {
+      left: -290px;
+    }
+  }
+
+}
