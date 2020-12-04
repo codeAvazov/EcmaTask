@@ -10,7 +10,7 @@ export const usersData = () => {
         {id : 8, firstName : 'Ahmad', lastName : 'Xojayev', phone : '+998934614188',  isActive : false},
         {id : 9, firstName : 'Jamshid', lastName : 'Suyunov', phone : '+998934614188',  isActive : false},
     ];
-}
+};
 export const navData = () => {
     return [
         {id : 1, title : 'Dashboard', to : '/dashboard', icon : <i className="ri-bar-chart-box-line"/>},
@@ -23,4 +23,25 @@ export const navData = () => {
         {id : 8, title : 'Home pdp.uz', to : '/home', icon : <i className="ri-arrow-right-up-line"/>},
         {id : 9, title : 'Chiqish', to : '/exit', icon : <i className="ri-shut-down-line"/>},
     ];
-}
+};
+
+export const filterModules = () => {
+    return [
+        {id : 1, isActive : false, title : 'Balans bo`yicha(o`sish)'},
+        {id : 2, isActive : false, title : 'Balans bo`yicha(kamayish)'},
+        {id : 3, isActive : false, title : 'Foydalanuvchi(A-Z)'},
+        {id : 4, isActive : false, title : 'Foydalanuvchi(Z-A)'},
+        {id : 5, isActive : false, title : 'Sana boyicha(o`sish)'},
+        {id : 6, isActive : false, title : 'Sana boyicha(kamayish)'},
+        {id : 7, isActive : false, title : 'Telegram yo`qlar'},
+        {id : 8, isActive : false, title : 'Active talabalar'},
+    ];
+};
+
+// export const selectModules = () => {
+//     return [
+//         {id : 1, title : 'Kurs', options : [{id : 1, title : 'Frontend', value : 0},]},
+//         {id : 1, title : 'Mudul', options : [{id : 1, title : 1, value : 0},]},
+//         {id : 1, title : 'Dars', options : [{id : 1, title : 1, value : 0},]},
+//     ]
+// } 

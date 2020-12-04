@@ -7,15 +7,15 @@
   box-shadow: 0 0 15px 0 #00000010;
   z-index: 999;
   bottom: 490px;
-  right: -180px;
+  right: -59%;
   transition: .6s ease-in-out;
   @media screen and (max-width: 768px){
-    right: -100px;
+    right: -20%;
   }
 
 
   &.openFilter {
-    bottom: -490px;
+    bottom: -1320%;
   }
 
   .selects {
@@ -26,8 +26,8 @@
       justify-content: space-between;
       border: 1px solid #D8D8D8;
       width: 220px;
-      height: 60px;
-      padding: 0 25px;
+      height: 55px;
+      padding-left: 5px;
       font-family: SF Pro Display, sans-serif;
       font-size: 16px;
       font-style: normal;
@@ -37,6 +37,10 @@
       text-align: left;
       cursor: pointer;
       margin-bottom: 10px;
+
+      &:focus {
+        outline: none;
+      }
 
       i {
         font-size: 24px;
