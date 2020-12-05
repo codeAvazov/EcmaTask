@@ -27,7 +27,7 @@ function App() {
     return (
     <div className='layoutApp'>
         <div className='right_block'>
-            <div className="container">
+            <div className="container-fluid px-5">
                 <Navbar/>
                 <Main/>
             </div>

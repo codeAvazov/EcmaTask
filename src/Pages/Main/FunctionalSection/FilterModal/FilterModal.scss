@@ -6,8 +6,10 @@
   padding: 24px;
   box-shadow: 0 0 15px 0 #00000010;
   z-index: 999;
-  bottom: 490px;
+  bottom: -1280%;
   right: -59%;
+  transform: translateZ(20px) scaleY(0);
+  transform-origin: top;
   transition: .6s ease-in-out;
   @media screen and (max-width: 768px){
     right: -20%;
@@ -15,7 +17,7 @@
 
 
   &.openFilter {
-    bottom: -1320%;
+    transform: translateZ(20px) scaleY(1);
   }
 
   .selects {
